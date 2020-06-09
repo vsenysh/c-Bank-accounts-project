@@ -1,0 +1,93 @@
+#include<stdio.h>
+#include<conio.h>
+#include<iostream.h>
+#include<stdlib.h>
+class bank
+{
+private:
+double a1,a2,sa,cu;
+char ac,c,s;
+public:
+bank()
+{
+}
+else if(ac=='c')
+{
+cu=cu+a1;
+}
+}
+void bank::withdraw(double amount2, char account)
+{
+a2=amount2,
+ac=account;
+if (ac=='s')
+{
+sa=sa-a2;
+}
+else if(ac=='c')
+{
+cu=cu-a2;
+}
+}
+void bank::print_balances()
+{
+cout<<"\nthe money in the savings account is: "<<sa;
+cout<<"\nthe money in the current  account is: "<<cu;
+sa=0;
+cu=0;
+}
+void deposit(double amount, char account);
+void withdraw(double amount, char account);
+void print_balances();
+};
+void bank::deposit(double amount1, char account)
+{
+a1=amount1,
+ac=account;
+if (ac=='s')
+{
+sa=sa+a1;
+}
+main()
+{
+char account;
+double amount1,amount2;
+int l;
+clrscr();
+bank b;
+do
+{
+
+cout<<"\nenter your choice";
+cout<<"\n1.deposit";
+cout<<"\n2. withdraw";
+cout<<"\n3.print balances";
+cout<<"\n4.exit";
+cout<<"\n";
+cin>>l;
+switch(l)
+{
+case 1:
+cout<<"\nenter account type: ";
+cin>>account;
+cout<<"\nenter amount to be deposited :" ;
+cin>>amount1;
+b.deposit(amount1, account);
+break;
+case 2:
+cout<<"\nenter account type: ";
+cin>>account;
+cout<<"\nenter amount to be withdrawn :" ;
+cin>>amount2;
+b.deposit(amount2, account);
+break;
+case 3:
+b.print_balances();
+break;
+case 4:
+cout<<"\nthanx ";
+
+}
+}while(l!=4);
+getch(); 
+}
